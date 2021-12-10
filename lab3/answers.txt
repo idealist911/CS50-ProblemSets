@@ -1,0 +1,43 @@
+sort1 uses: bubble sort
+
+How do you know?: the run-time significantly reduces when given sorted data.
+
+sort2 uses: merge sort
+
+How do you know?: the run-time is similar for whatever data and the run-times are short.
+
+sort3 uses: selection sort
+
+How do you know?: the run-time is similar for whatever data and the run-times are long.
+
+
+It seems that the larger the dataset, the more obvious the comparison.
+It seems that one should read real-time.
+
+Data (real-time):
+(sort1, sort2, sort3)
+on reversed5000: .057s, .015s, .044s
+on sorted5000: .016s, .014s, .067s
+on random5000: .068s, .012s, .038s
+
+on reversed10000: .428s, .034s, .222s
+on sorted10000: .020s, .037s, .164s
+on random10000: .518s, .025s, .193s
+
+on reversed50000: 13.513s, 6.063s, 10.551s
+on sorted50000: 5.125s, 5.528s, 8.761s
+on random50000: 19.274s, 7.873s, 11.896s
+
+Data (sys-time):
+(sort1, sort2, sort3)
+on reversed5000: .008s, .013s, .008s
+on sorted5000: .011s, .004s, .009s
+on random5000: .009s, .007s, .008s
+
+on reversed10000: .012s, .022s, .016s
+on sorted10000: .015s, .021s, .004s
+on random10000: .020s, .013s, .016s
+
+on reversed50000: .096s, .078s, .080s
+on sorted50000: .077s, .080s, .124s
+on random50000: .080s, .082s, .084s
