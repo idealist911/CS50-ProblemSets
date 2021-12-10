@@ -1,0 +1,17 @@
+# Ask user for integer input until he gives an integer
+while True:
+    try:
+        height = int(input("Height: "))
+        if (height > 0 and height < 9):
+            break
+    except ValueError:
+        # nothing. no print out wanted.
+        print("", end="")
+
+
+bricks = "#"
+for row in range(height):
+    # build tower
+    print(" " * (height - row - 1), end="")
+    print(bricks * (row + 1), end="")
+    print("")

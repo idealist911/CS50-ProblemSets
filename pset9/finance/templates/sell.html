@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <script>
+        // Updates max value for num_shares input
+        function update()
+        {
+            // get value from select menu
+            // var symbol = document.getElementById("symbol");
+            // var stock;
+            // for (let i = 0; i < stocks.length; i++)
+            // {
+            //     if (stocks[i]["symbol"] == symbol)
+            //     {
+            //         stock = stocks[i];
+            //     }
+            // }
+
+            var total_shares = document.getElementById("num_shares_hidden").innerHTML;
+            document.getElementById("num_shares").setAttribute("max", `${total_shares}`);
+        }
+    </script>
+
+    <form action="/sell" method="post">
+        <table>
+            <tr>
+                <th>Select a stock:</th>
+                <td>
+                    <select name="symbol" id="symbol" required onChange="update()">
+                        <option value="Select" selected disabled>-- Select --</option>
+                        {% for stock in stocks %}
+                            <option>{{ stock.symbol }}</option>
+                            <div style="display:none;" id="num_shares_hidden">{{ stock.total_shares }}</div>
+                        {% endfor %}
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th><label>Number of shares:</label></th>
+                <td><input class="form-control" name="shares" type="number" value="1" min="1" id="num_shares"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="btn btn-primary" type="submit">Sell</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+{% endblock %}

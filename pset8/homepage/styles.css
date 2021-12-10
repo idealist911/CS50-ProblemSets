@@ -1,0 +1,106 @@
+.jumbotron {
+    /*background-color: #477bff;*/
+    background-color: #aa0000;
+    color: #fff;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: #aa0000;
+}
+
+.navbar-toggle {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    margin-left: auto;
+    /*margin-right: 0;*/
+}
+
+/*.dropdown-toggle {*/
+/*    padding-left: 20px;*/
+/*    padding-top: 50px;*/
+/*}*/
+
+a.dropdown-toggle:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.dropdown-toggle:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background-color: #333;
+    padding-left: 20px;
+    border: none;
+}
+
+a.nav-link:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+a.nav-link:visited {
+    color: #fff;
+}
+
+.active {
+    background-color: #000;
+}
+
+.dclock {
+    font-size: 150px;
+}
+
+.aclock {
+    /*background-color: #aaaaaa;*/
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    /*border: 5px solid #000;*/
+    background-image: url(clock-border.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/* The hands of the analog clock */
+/* Height denotes the width of the hand */
+/* Width denotes the length of the hand */
+.hour,
+.min,
+.sec {
+    height: 3px;
+    width: 40%;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: left;
+}
+
+.hour {
+    height: 8px;
+    width: 25%;
+    border-radius: 80%;
+    /*transform: rotate(-30deg);*/
+    /*transform-origin: left;*/
+}
+
+.min {
+    height: 8px;
+    width: 40%;
+    /*transform: rotate(-60deg);*/
+    /*transform-origin: left;*/
+}
